@@ -21,7 +21,7 @@ const loginSchema = joi.object({
   password: joi.string().min(3).required(),
 });
 
-router.post("/signin", async (req, res) => {
+router.post("/register", async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
 
   const user = await Login.findOne({ email });
