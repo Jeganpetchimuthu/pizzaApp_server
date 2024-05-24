@@ -43,7 +43,7 @@ router.post("/register", async (req, res) => {
 
 //CREATE A NEW TOKEN
 
-router.post("/auth", async (req, res) => {
+router.post("/signup", async (req, res) => {
   const { password, email } = req.body;
 
   const user = await Login.findOne({ email });
